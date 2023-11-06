@@ -3,39 +3,55 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Proyecto integrador Front | Gisele Gonzalez</title>
+        <title>Proyecto integrador Front | Cabana Samuel</title>
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" href="./css/estiloss.css">
+        
     </head>
     <body>
         <header>
             <section id="botoneraPrincipal">
-                <div class="botoneraPrincipal" >
-                    <div class="logo">
-                        <a href="https://www.google.com/" target="_blank">   
-                            <img src="./assets/img/codoacodo.png" alt="logo de codo a codo 4.0">
-                        </a>
-                    </div>
-                    <div class="confBsAs">
-                        <h2 class="colorBlanco tituloSec">Conf Bs As</h2>
-                    </div>
-                    <nav class="navegacion">
-                        <ul class="listaNav linkNav" >
-                            <li><a class="colorBlanco linkNav" href="#conferencia">La conferencia</a></li>
-                            <li><a class="colorGris linkNav" href="#oradores">Los oradores</a></li>
-                            <li><a class="colorGris linkNav" href="#lugarFecha">El lugar y la fecha</a></li>
-                            <li><a class="colorGris linkNav" href="#formularioOrador">Conviertete en orador</a></li>
-                            <li><a class="colorVerde linkNav" href="./pages/tickets.html">Comprar tickets</a></li>
+                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(52,58,64);">
+                    <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/img/codoacodo.png" alt="logo de codo a codo 4.0" width="110px" loading="lazy">
+                    </a>
+                    <p class="confBsAs">
+                        Conf Bs As
+                    </p>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#conferencia">La conferencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#oradores">Los oradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#lugarFecha">El lugar y la fecha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#formularioOrador">Conviértete en orador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link colorVerde" href="./pages/tickets.html">Comprar tickets</a>
+                        </li>
                         </ul>
-                    </nav>
-                </div>
+                    </div>
+                    </div>
+                </nav>
             </section>
             <section id="conferencia">
                 <div class="conferencia">
                     <h1 class="colorBlanco tituloPpal">Conf Bs As</h1>
                     <p class="colorBlanco textoConferencia">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que estan creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de codo a codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
                     <div class="anclas">
-                        <a href="" class="colorBlanco linkNav botnTransp">Quiero ser orador</a>
-                        <a href="" class="colorBlanco linkNav botnVerde">Comprar tickets</a>
+                        <a href="#formularioOrador" class="colorBlanco linkNav botnTransp">Quiero ser orador</a>
+                        <a href="./pages/tickets.html" class="colorBlanco linkNav botnVerde">Comprar tickets</a>
                     </div>
                 </div>
             </section>
@@ -127,6 +143,7 @@
                 </ul>
             </nav>
         </footer>
-        
+        <script src="./js/comprar-tickets.js"></script>
+        <script src="./js/bootstrap.bundle.min.js"></script>  
     </body>
 </html>

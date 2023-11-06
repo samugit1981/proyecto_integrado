@@ -1,26 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <a href="https://www.google.com/" target="_blank">   
-            <img src="./assets/img/codoacodo.png" alt="logo de codo a codo 4.0">
-        </a>
-        <h2>Conf Bs As</h2>
-        <nav>
-            <ul>
-                <li><a href="../index.html#conferencia">La conferencia</a></li>
-                <li><a href="../index.html#oradores">Los oradores</a></li>
-                <li><a href="../index.html#lugarFecha">El lugar y la fecha</a></li>
-                <li><a href="../index.html#formularioOrador">Conviertete en orador</a></li>
-                <li><a href="#">Comprar tickets</a></li>
-            </ul>
-        </nav>
-    </header>    
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyecto integrador Front | Cabana Samuel</title>
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/estiloss.css">
     
-</body>
+    </head>
+    <body>
+        <header>
+            <section id="botoneraPrincipal">
+                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(52,58,64);">
+                    <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="../assets/img/codoacodo.png" alt="logo de codo a codo 4.0" width="110px" loading="lazy">
+                    </a>
+                    <p class="confBsAs">
+                        Conf Bs As
+                    </p>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html#conferencia">La conferencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#oradores">Los oradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#lugarFecha">El lugar y la fecha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#formularioOrador">Conviértete en orador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link colorVerde" href="./tickets.html">Comprar tickets</a>
+                        </li>
+                        </ul>
+                    </div>
+                    </div>
+                </nav>
+            </section>
+        </header>
+        <main>
+            <div class="container col-7">
+                <div class="row col-12 tickets">
+                    <div class="col-md-4 descuentos">
+                        <div class="margen">
+                        <h4>Estudiante</h4>
+                        <p>Tienen un descuento</p>
+                        <p class="porcentaje">80%</p>
+                        <p>* presentar documentacion</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 descuentos">
+                        <div class="margen">
+                        <h4>Trainee</h4>
+                        <p>Tienen un descuento</p>
+                        <p class="porcentaje">50%</p>
+                        <p>* presentar documentacion</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 descuentos">
+                        <div class="margen">
+                        <h4>Junior</h4>
+                        <p>Tienen un descuento</p>
+                        <p class="porcentaje">15%</p>
+                        <p>* presentar documentacion</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row col-12 containerPropio">
+                    <div>
+                        <h2 class="valor"><div class="venta">VENTA</div>VALOR DE TICKETS $200</h2>
+                    </div>
+                    <div class="row formularioTickets">
+                    <form action="" class="row g-3 formularioTickets">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" aria-label="Nombre" id="nombre" placeholder="Nombre" required>
+                        </div>
+                        <div class="invalid-feedback" id="mensajeErrorNombre">
+                            <p>Ingrese su Nombre</p>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" aria-label="Apellido" id="apellido" placeholder="Apellido" required>
+                        </div>
+                        <div class="invalid-feedback" id="mensajeErrorApellido">
+                            <p>Ingrese su Apellido</p>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="email" class="form-control" aria-label="Email" id="email" placeholder="Correo" required>
+                        </div>
+                        <div class="invalid-feedback" id="mensajeErrorEmail">
+                            <p>Ingrese su Correo</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cantidadTickets" class="form-label">Cantidad</label>
+                            <input type="number" class="form-control" aria-label="Cantidad" id="cantidadTickets" placeholder="Cantidad" min="1" required>
+                        </div>
+                        <div class="invalid-feedback" id="mensajeErrorTickets">
+                            <p>Elija cantidad de Tickets</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="categoriaSelect" class="form-label">Categoria</label>
+                            <select class="form-select" aria-label="Categoria" id="categoriaSelect">
+                                <option value="" selected>--Seleccione--</option>
+                                <option value="0">Sin Categoria</option>
+                                <option value="1">Estudiante</option>
+                                <option value="2">Trainee</option>
+                                <option value="3">Junior</option>
+                            </select>
+                        </div>
+                        <div class="invalid-feedback" id="mensajeErrorCategoria">
+                            <p>Seleccione Categoria</p>
+                        </div>
+                        <div class="col-md-12 totalPago">
+                            Total a Pagar: $ <span id="totalDePago" class="aling-middle"></span>
+                        </div>
+                        <div class="col-6">
+                            <button type="reset" class="btn btn-primary btnPropio" id="btnBorrar">Borrar</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-primary btnPropio" id="btnResumen">Resumen</button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <nav class="botoneraFinal">
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#">Prensa</a></li>
+                    <li><a href="#">Conferencias</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Estudiantes</a></li>
+                </ul>
+            </nav>
+        </footer>
+        <script src="../js/comprar-tickets.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>       
+    </body>
 </html>

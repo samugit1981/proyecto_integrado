@@ -14,33 +14,18 @@
 .colorVerde{
     color: rgb(46, 141, 69);
 }
-#botoneraPrincipal{
-    position: sticky;
-    top: 0;
-}
-.botoneraPrincipal{
-    height: 80px;
-    font-size: 20px;
-    display: flex;
-    background-color: rgb(52, 58, 64);
-    justify-content: center;
-    align-items: center;
-}
-.logo{
-    width: 15%;
-    padding-left: 100px;
-}
-.logo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.tituloPpal{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 35px;
+.navbar-dark .navbar-nav .nav-link.colorVerde{
+    color: rgb(43, 142, 67);
 }
 .confBsAs{
     width: 20%;
+    color: white;
+    font-size: larger;
+    margin-top: 10px;
+}
+#botoneraPrincipal{
+    position: fixed;
+    width: 100%;
 }
 .tituloSec{
     font-family: Arial, Helvetica, sans-serif;
@@ -50,20 +35,7 @@
 .textoConferencia{
     font-size: 18px;
 }
-.navegacion{
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    padding-right: 100px;
-}
-header ul li{
-    display: inline;
-    margin: 5px;
-}
-.listaNav{
-    list-style: none;
-}
+
 .linkNav{
     text-decoration: none;
 }
@@ -78,16 +50,12 @@ header ul li{
     border-radius: 5px;
     padding: 5px;
 }
-.tituloPricipal{
-    height: 600px;
-    width: 1200px;
-}
 .anclas{
     display: inline;
     font-size: 18px;
 }
 #conferencia{
-    height: 550px;
+    height: 650px;
     width: 100%;
     background: linear-gradient(to right, #00000096 , #00000096),url("../assets/img/hawaii.jpg");
     background-size: cover;
@@ -101,7 +69,7 @@ header ul li{
     flex-direction: column;
     justify-content: center;
     text-align: end;
-    padding-right: 100px;
+    padding-right: 120px;
     margin-left: 50%;
 }
 .oradoresGrande{
@@ -288,43 +256,90 @@ header ul li{
     padding: 30px;
     text-align: center;
 }
-
-@media all and (max-width:599px){
-    
-*{
+.containerPropio{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: 1.7;
 }
-#botoneraPrincipal{
-    position: absolute;
-    top: 0;
+.tickets{
+    padding-top: 90px;
+    justify-content: center;
+    margin-right: 0;
+    margin-left: 0;
 }
-.botoneraPrincipal{
-    height: 400px;
-    font-size: 20px;
+.notFound{
+    height: 80vh;
+    padding-top: 90px;
     display: flex;
-    background-color: rgb(52, 58, 64);
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
 }
-.navegacion{
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    padding-right: 100px;
+.contenedorNot{
+    background-color: rgb(166, 82, 223);
+    height: 200px;
+    width: 300px;
+    border: 2px solid black;
+    text-align: center;
+    padding-top: 30px;
+    transform: translate(0px, 0px);
 }
-.tituloPricipal{
-    height: 600px;
-    width: 1200px;
+.contenedorNot:hover{
+    transform: translate(0px, 0px) escale(1.5);
 }
+.formularioTickets{
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.venta{
+    text-align: center;
+    font-size: small;
+    font-weight: normal;
+}
+.valor{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0;
+}
+.descuentos{
+    text-align: center;
+    padding-top: 20px;
+    margin: 0;
+}
+.descuentos h4{
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+.porcentaje{
+    font-weight: bold;
+}
+.margen{
+    width: 230px;
+    height: 190px;
+    border: 2px solid rgb(8, 194, 178);
+}
+.btnPropio{
+    width: 100%;
+    background-color: rgb(151, 201, 62);
+    border: 0;
+}
+.totalPago{
+    width: 98%;
+    height: 50px;
+    color: blue;
+    background-color: rgb(204, 229, 255);
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.propia{
+    display: block;
+}
+
+
+@media all and (max-width:599px){
+
 #conferencia{
-    height: 1000px;
+    height: 450px;
     width: 100%;
     background: linear-gradient(to right, #00000096 , #00000096),url("../assets/img/hawaii.jpg");
     background-size: cover;
@@ -341,7 +356,7 @@ header ul li{
     text-align: center;
     padding-right: 0px;
     margin-left: 0%;
-    padding-top: 400px;
+    padding-top: 0px;
 }
 .galeria{
     display: flex;
@@ -377,7 +392,7 @@ header ul li{
     width: 100%;
 }
 .footer{
-    height: 450px;
+    height: auto;
     background-image: linear-gradient(to right, #1c3643, #1c3d4e, #1d445a, #1d4c66, #1e5372);
     margin-top: 15px;
 }
@@ -398,6 +413,51 @@ header ul li{
     align-content: center;
 
 }
+}
+@media all and (min-width:600px) and (max-width:1200px){
+
+    #conferencia{
+        height: 400px;
+        width: 100%;
+        background: linear-gradient(to right, #00000096 , #00000096),url("../assets/img/hawaii.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        justify-content: center;
+    }
+    .conferencia{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-right: 0px;
+        margin-left: 0%;
+        padding-top: 0px;
+    }
+    .footer{
+        height: auto;
+        background-image: linear-gradient(to right, #1c3643, #1c3d4e, #1d445a, #1d4c66, #1e5372);
+        margin-top: 15px;
+    }
+    .botoneraFinal{
+        width: 100%;
+        height: 100%;
+        margin-left: 0%;
+    }
+    .botoneraFinal ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+    
+    }
 }
 
 
